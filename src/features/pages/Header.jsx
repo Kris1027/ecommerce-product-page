@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div className='flex justify-between w-full p-6'>
+    <div className='flex justify-between w-full p-4'>
       <div className='flex gap-4'>
         <img
           src='../src/assets/icon-menu.svg'
