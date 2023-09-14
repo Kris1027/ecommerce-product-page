@@ -1,16 +1,24 @@
 import { Link } from 'react-router-dom';
 import Menu from './Menu';
+import { useState } from 'react';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleToggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <>
-      <Menu />
-      <div className='flex justify-between w-full p-4'>
+      <Menu onCloseMenu={handleToggleMenu} isMenuOpen={isMenuOpen} />
+      <div className='flex justify-between items-center w-full h-20 px-4'>
         <div className='flex gap-4'>
           <img
             src='../src/assets/icon-menu.svg'
             alt='menu icon'
             className='h-6 cursor-pointer'
+            onClick={handleToggleMenu}
           />
           <Link to='/'>
             <img

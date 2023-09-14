@@ -1,10 +1,15 @@
-function Menu() {
+function Menu({ onCloseMenu, isMenuOpen }) {
   return (
-    <div className='h-full w-2/3 absolute z-30 top-0 -left-full bg-slate-100 p-6 font-bold text-2xl'>
+    <div
+      className={`${
+        isMenuOpen ? ' left-0' : '-left-full'
+      } h-full w-2/3 absolute z-30 top-0 bg-slate-100 p-6 font-bold text-2xl transition-all duration-300 ease-linear`}
+    >
       <img
         src='../src/assets/icon-close.svg'
         alt='close menu icon'
         className='pb-16 cursor-pointer'
+        onClick={onCloseMenu}
       />
       <ul className='flex flex-col gap-y-6'>
         <li className='cursor-pointer hover:text-orange-500'>Collections</li>
