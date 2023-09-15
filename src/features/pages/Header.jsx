@@ -14,7 +14,7 @@ function Header() {
     <>
       <MenuMobile onCloseMenu={handleToggleMenu} isMenuOpen={isMenuOpen} />
       <MenuDesktop />
-      <div className='flex justify-between items-center w-full h-24 px-4 lg:px-24'>
+      <div className='flex justify-between items-center w-full h-24 px-4'>
         <div className='flex gap-4'>
           <img
             src='../src/assets/icon-menu.svg'

@@ -4,7 +4,7 @@ import Header from './Header';
 
 function AppLayout() {
   return (
-    <div>
+    <div className='max-w-screen-2xl mx-auto'>
       <Header />
       <main>
         <Outlet />

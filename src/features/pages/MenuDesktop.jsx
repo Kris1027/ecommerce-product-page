@@ -1,6 +1,6 @@
 function MenuDesktop() {
   return (
-    <div className='hidden lg:block absolute left-1/4'>
+    <div className='hidden lg:block absolute left-1/2 -translate-x-1/2'>
       <ul className='flex h-24 w-full items-center gap-x-6 opacity-50'>
         <li className='cursor-pointer hover:text-orange-500'>Collections</li>
         <li className='cursor-pointer hover:text-orange-500'>Men</li>
