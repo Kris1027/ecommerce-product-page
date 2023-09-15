@@ -3,7 +3,7 @@ function Menu({ onCloseMenu, isMenuOpen }) {
     <div
       className={`${
         isMenuOpen ? ' left-0' : '-left-full'
-      } h-full w-2/3 absolute z-30 top-0 bg-slate-100 p-6 font-bold text-2xl transition-all duration-300 ease-linear`}
+      } h-full w-2/3 absolute z-30 top-0 bg-slate-100 p-6 transition-all duration-300 ease-linear lg:hidden`}
     >
       <img
         src='../src/assets/icon-close.svg'
@@ -11,7 +11,7 @@ function Menu({ onCloseMenu, isMenuOpen }) {
         className='pb-16 cursor-pointer'
         onClick={onCloseMenu}
       />
-      <ul className='flex flex-col gap-y-6'>
+      <ul className='flex flex-col gap-y-6 font-bold text-2xl'>
         <li className='cursor-pointer hover:text-orange-500'>Collections</li>
         <li className='cursor-pointer hover:text-orange-500'>Men</li>
         <li className='cursor-pointer hover:text-orange-500'>Women</li>

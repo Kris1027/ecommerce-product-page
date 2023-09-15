@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import Menu from './Menu';
+import MenuMobile from './MenuMobile';
 import { useState } from 'react';
+import MenuDesktop from './MenuDesktop';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,13 +12,14 @@ function Header() {
 
   return (
     <>
-      <Menu onCloseMenu={handleToggleMenu} isMenuOpen={isMenuOpen} />
-      <div className='flex justify-between items-center w-full h-20 px-4'>
+      <MenuMobile onCloseMenu={handleToggleMenu} isMenuOpen={isMenuOpen} />
+      <MenuDesktop />
+      <div className='flex justify-between items-center w-full h-24 px-4 lg:px-24'>
         <div className='flex gap-4'>
           <img
             src='../src/assets/icon-menu.svg'
             alt='menu icon'
-            className='h-6 cursor-pointer'
+            className='h-6 cursor-pointer lg:hidden'
             onClick={handleToggleMenu}
           />
           <Link to='/'>
@@ -28,7 +30,7 @@ function Header() {
             />
           </Link>
         </div>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 items-center'>
           <img
             src='../src/assets/icon-cart.svg'
             alt='icon of the cart'
@@ -37,10 +39,11 @@ function Header() {
           <img
             src='../src/assets/image-avatar.png'
             alt='profile photo'
-            className='h-6 cursor-pointer'
+            className='h-6 lg:h-12 cursor-pointer'
           />
         </div>
       </div>
+      <hr className='lg:pb-16' />
     </>
   );
 }
