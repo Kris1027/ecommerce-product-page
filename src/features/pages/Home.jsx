@@ -14,7 +14,7 @@ function Home() {
     <div className='lg:px-24 lg:flex lg:flex-row lg:gap-x-20 lg:items-center'>
       <ProductGallery handleShowOn={handleShowOn} />
       <ProductDescription />
-      <Lightbox showOn={showOn} />
+      <Lightbox showOn={showOn} handleShowOn={handleShowOn} />
     </div>
   );
 }
