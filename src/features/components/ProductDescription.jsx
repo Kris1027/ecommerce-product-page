@@ -1,4 +1,9 @@
+import { useProductContext } from '../contexts/prodContext';
+
 function ProductDescription() {
+  const { productAmount, handleDecreaseAmount, handleIncreaseAmount } =
+    useProductContext();
+
   return (
     <div className='p-8 flex flex-col gap-y-5'>
       <p className='uppercase text-orange-500 text-xs lg:text-lg font-semibold tracking-widest'>
@@ -25,7 +30,10 @@ function ProductDescription() {
       </div>
       <div className='lg:flex lg:flex-row flex flex-col items-center gap-4'>
         <div className='flex items-center justify-between w-full lg:w-2/5 bg-slate-100 p-4 rounded-lg'>
-          <div className='cursor-pointer hover:scale-150 active:scale-90'>
+          <div
+            onClick={handleDecreaseAmount}
+            className='cursor-pointer hover:scale-150 active:scale-90'
+          >
             <svg
               width='12'
               height='4'
@@ -42,9 +50,12 @@ function ProductDescription() {
             </svg>
           </div>
           <div className='font-bold'>
-            <span>0</span>
+            <span>{productAmount}</span>
           </div>
-          <div className='cursor-pointer hover:scale-150 active:scale-90'>
+          <div
+            onClick={handleIncreaseAmount}
+            className='cursor-pointer hover:scale-150 active:scale-90'
+          >
             <svg
               width='12'
               height='12'

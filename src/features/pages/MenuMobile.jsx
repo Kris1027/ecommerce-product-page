@@ -3,7 +3,7 @@ function Menu({ onCloseMenu, isMenuOpen }) {
     <div
       className={`${
         isMenuOpen ? ' left-0' : '-left-full'
-      } h-full w-2/3 absolute z-30 top-0 bg-slate-100 p-6 transition-all duration-300 ease-linear lg:hidden`}
+      } h-full w-2/3 absolute z-50 top-0 bg-slate-100 p-6 transition-all duration-300 ease-linear lg:hidden`}
     >
       <div className='cursor-pointer pb-16' onClick={onCloseMenu}>
         <svg
