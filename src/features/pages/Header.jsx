@@ -48,11 +48,13 @@ function Header() {
               fillRule='nonzero'
             />
           </svg>
-          <img
-            src='../src/assets/image-avatar.png'
-            alt='profile photo'
-            className='h-6 lg:h-12 cursor-pointer active:scale-90'
-          />
+          <div>
+            <img
+              src='../src/assets/image-avatar.png'
+              alt='profile photo'
+              className='h-6 lg:h-12 cursor-pointer active:scale-90 border-2 border-transparent rounded-full hover:border-orange-500'
+            />
+          </div>
         </div>
       </div>
       <hr className='lg:pb-16' />

@@ -1,6 +1,6 @@
 function ProductDescription() {
   return (
-    <div className='p-4 flex flex-col gap-y-5'>
+    <div className='flex flex-col gap-y-5 pt-4'>
       <p className='uppercase text-orange-500 text-xs lg:text-lg font-semibold tracking-widest'>
         sneaker company
       </p>

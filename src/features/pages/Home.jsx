@@ -11,7 +11,7 @@ function Home() {
   }
 
   return (
-    <div className='lg:px-24 lg:flex lg:flex-row lg:gap-x-20 lg:items-center'>
+    <div className='lg:px-24 lg:flex md:flex-col lg:flex-row lg:gap-x-20 lg:items-center'>
       <ProductGallery handleShowOn={handleShowOn} />
       <ProductDescription />
       <Lightbox showOn={showOn} handleShowOn={handleShowOn} />
