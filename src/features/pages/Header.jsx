@@ -3,10 +3,14 @@ import MenuMobile from './MenuMobile';
 import { useState } from 'react';
 import MenuDesktop from './MenuDesktop';
 import Cart from '../components/Cart';
+import AmountProductInfo from '../components/AmountProductInfo';
+import { useProductContext } from '../contexts/prodContext';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const { productAmount } = useProductContext();
 
   function handleToggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -58,6 +62,7 @@ function Header() {
               fillRule='nonzero'
             />
           </svg>
+          {productAmount === 0 ? '' : <AmountProductInfo />}
           <div>
             <img
               src='../src/assets/image-avatar.png'

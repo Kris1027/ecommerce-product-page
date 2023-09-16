@@ -31,7 +31,7 @@ function Cart({ isCartOpen }) {
                 <p className='text-slate-500 tracking-wider'>
                   $125.00 x {productAmount}
                   <span className='text-black font-bold pl-2'>
-                    ${totalPrice}
+                    ${totalPrice}.00
                   </span>
                 </p>
               </div>

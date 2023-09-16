@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react';
 const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
-  const [productAmount, setProductAmount] = useState(4);
+  const [productAmount, setProductAmount] = useState(0);
 
   function handleDecreaseAmount() {
     if (productAmount === 0) return;
