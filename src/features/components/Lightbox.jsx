@@ -7,6 +7,22 @@ function Lightbox({ showOn }) {
     setProductImage(Number(e.target.getAttribute('value')));
   }
 
+  function handlePreviousPhoto() {
+    if (productImage === 1) {
+      setProductImage(4);
+    } else {
+      setProductImage(productImage - 1);
+    }
+  }
+
+  function handleNextPhoto() {
+    if (productImage === 4) {
+      setProductImage(1);
+    } else {
+      setProductImage(productImage + 1);
+    }
+  }
+
   return (
     <div
       className={`${
@@ -81,13 +97,19 @@ function Lightbox({ showOn }) {
         </div>
       </div>
       <div className='absolute top-1/2 transform -translate-y-28 flex justify-between w-full'>
-        <div className='flex justify-center items-center bg-white w-10 h-10 rounded-full cursor-pointer'>
+        <div
+          className='flex justify-center items-center bg-white w-10 h-10 rounded-full cursor-pointer'
+          onClick={handlePreviousPhoto}
+        >
           <img
             src='../src/assets/icon-previous.svg'
             alt='icon of previous slide'
           />
         </div>
-        <div className='flex justify-center items-center bg-white w-10 h-10 rounded-full cursor-pointer'>
+        <div
+          className='flex justify-center items-center bg-white w-10 h-10 rounded-full cursor-pointer'
+          onClick={handleNextPhoto}
+        >
           <img src='../src/assets/icon-next.svg' alt='icon of next slide' />
         </div>
       </div>
