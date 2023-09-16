@@ -9,22 +9,22 @@ function ProductGallery() {
       <div className='hidden lg:block'>
         <div className='flex justify-between mt-5'>
           <img
-            className='rounded-2xl cursor-pointer'
+            className='rounded-2xl cursor-pointer hover:opacity-50'
             src='../src/assets/image-product-1-thumbnail.jpg'
             alt='product photo nr 1 thumbnail'
           />
           <img
-            className='rounded-2xl cursor-pointer'
+            className='rounded-2xl cursor-pointer hover:opacity-50'
             src='../src/assets/image-product-2-thumbnail.jpg'
             alt='product photo nr 2 thumbnail'
           />
           <img
-            className='rounded-2xl cursor-pointer'
+            className='rounded-2xl cursor-pointer hover:opacity-50'
             src='../src/assets/image-product-3-thumbnail.jpg'
             alt='product photo nr 3 thumbnail'
           />
           <img
-            className='rounded-2xl cursor-pointer'
+            className='rounded-2xl cursor-pointer hover:opacity-50'
             src='../src/assets/image-product-4-thumbnail.jpg'
             alt='product photo nr 4 thumbnail'
           />
