@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import ProductDescription from '../components/ProductDescription';
 import ProductGallery from '../components/ProductGallery';
 import Lightbox from '../components/Lightbox';
+import { useState } from 'react';
 
 function Home() {
   const [showOn, setShowOn] = useState(false);

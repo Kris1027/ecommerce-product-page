@@ -1,4 +1,12 @@
+import { useState } from 'react';
+
 function Lightbox({ showOn }) {
+  const [productImage, setProductImage] = useState(1);
+
+  function handleChangeImage(e) {
+    setProductImage(Number(e.target.getAttribute('value')));
+  }
+
   return (
     <div
       className={`${
@@ -7,30 +15,70 @@ function Lightbox({ showOn }) {
     >
       <img
         className='lg:max-w-3xl lg:rounded-2xl cursor-pointer'
-        src='../src/assets/image-product-1.jpg'
+        src={`../src/assets/image-product-${productImage}.jpg`}
         alt='product photo nr 1'
       />
       <div className='flex justify-between mt-5'>
-        <img
-          className='rounded-2xl cursor-pointer hover:opacity-50'
-          src='../src/assets/image-product-1-thumbnail.jpg'
-          alt='product photo nr 1 thumbnail'
-        />
-        <img
-          className='rounded-2xl cursor-pointer hover:opacity-50'
-          src='../src/assets/image-product-2-thumbnail.jpg'
-          alt='product photo nr 2 thumbnail'
-        />
-        <img
-          className='rounded-2xl cursor-pointer hover:opacity-50'
-          src='../src/assets/image-product-3-thumbnail.jpg'
-          alt='product photo nr 3 thumbnail'
-        />
-        <img
-          className='rounded-2xl cursor-pointer hover:opacity-50'
-          src='../src/assets/image-product-4-thumbnail.jpg'
-          alt='product photo nr 4 thumbnail'
-        />
+        <div
+          className={`border-4 ${
+            productImage === 1 ? 'border-orange-500' : 'border-transparent'
+          } rounded-2xl cursor-pointer`}
+        >
+          <img
+            className={`hover:sepia rounded-xl ${
+              productImage === 1 ? 'sepia' : ''
+            }`}
+            src='../src/assets/image-product-1-thumbnail.jpg'
+            alt='product photo nr 1 thumbnail'
+            value={1}
+            onClick={handleChangeImage}
+          />
+        </div>
+        <div
+          className={`border-4 ${
+            productImage === 2 ? 'border-orange-500' : 'border-transparent'
+          } rounded-2xl cursor-pointer`}
+        >
+          <img
+            className={`hover:sepia rounded-xl ${
+              productImage === 2 ? 'sepia' : ''
+            }`}
+            src='../src/assets/image-product-2-thumbnail.jpg'
+            alt='product photo nr 2 thumbnail'
+            value={2}
+            onClick={handleChangeImage}
+          />
+        </div>
+        <div
+          className={`border-4 ${
+            productImage === 3 ? 'border-orange-500' : 'border-transparent'
+          } rounded-2xl cursor-pointer`}
+        >
+          <img
+            className={`hover:sepia rounded-xl ${
+              productImage === 3 ? 'sepia' : ''
+            }`}
+            src='../src/assets/image-product-3-thumbnail.jpg'
+            alt='product photo nr 3 thumbnail'
+            value={3}
+            onClick={handleChangeImage}
+          />
+        </div>
+        <div
+          className={`border-4 ${
+            productImage === 4 ? 'border-orange-500' : 'border-transparent'
+          } rounded-2xl cursor-pointer`}
+        >
+          <img
+            className={`hover:sepia rounded-xl ${
+              productImage === 4 ? 'sepia' : ''
+            }`}
+            src='../src/assets/image-product-4-thumbnail.jpg'
+            alt='product photo nr 4 thumbnail'
+            value={4}
+            onClick={handleChangeImage}
+          />
+        </div>
       </div>
       <div className='absolute top-1/2 transform -translate-y-28 flex justify-between w-full'>
         <div className='flex justify-center items-center bg-white w-10 h-10 rounded-full cursor-pointer'>
