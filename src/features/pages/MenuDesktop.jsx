@@ -1,12 +1,22 @@
 function MenuDesktop() {
   return (
     <div className='hidden lg:block absolute left-1/2 -translate-x-1/2'>
-      <ul className='flex h-24 w-full items-center gap-x-6 opacity-50'>
-        <li className='cursor-pointer hover:text-orange-500'>Collections</li>
-        <li className='cursor-pointer hover:text-orange-500'>Men</li>
-        <li className='cursor-pointer hover:text-orange-500'>Women</li>
-        <li className='cursor-pointer hover:text-orange-500'>About</li>
-        <li className='cursor-pointer hover:text-orange-500'>Contact</li>
+      <ul className='flex h-24 w-full items-center gap-x-6 text-stone-400'>
+        <li className='cursor-pointer hover:border-b-4 hover:text-stone-950 border-orange-500 h-full flex items-center'>
+          Collections
+        </li>
+        <li className='cursor-pointer hover:border-b-4 hover:text-stone-950 border-orange-500 h-full flex items-center'>
+          Men
+        </li>
+        <li className='cursor-pointer hover:border-b-4 hover:text-stone-950 border-orange-500 h-full flex items-center'>
+          Women
+        </li>
+        <li className='cursor-pointer hover:border-b-4 hover:text-stone-950 border-orange-500 h-full flex items-center'>
+          About
+        </li>
+        <li className='cursor-pointer hover:border-b-4 hover:text-stone-950 border-orange-500 h-full flex items-center'>
+          Contact
+        </li>
       </ul>
     </div>
   );
