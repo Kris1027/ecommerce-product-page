@@ -1,10 +1,11 @@
-function ProductGallery() {
+function ProductGallery({ handleShowOn }) {
   return (
     <div className='relative h-full'>
       <img
         className='lg:max-w-3xl lg:rounded-2xl cursor-pointer'
         src='../src/assets/image-product-1.jpg'
         alt='product photo nr 1'
+        onClick={handleShowOn}
       />
       <div className='hidden lg:block'>
         <div className='flex justify-between mt-5'>
