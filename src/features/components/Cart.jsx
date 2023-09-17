@@ -20,7 +20,7 @@ function Cart({ isCartOpen }) {
               <div className='w-20'>
                 <img
                   className='rounded-lg'
-                  src='../src/assets/image-product-1-thumbnail.jpg'
+                  src='./image-product-1-thumbnail.jpg'
                   alt=''
                 />
               </div>
