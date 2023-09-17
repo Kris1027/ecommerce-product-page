@@ -47,7 +47,7 @@ function Lightbox({ showOn, handleShowOn }) {
         <div className='lg:max-w-3xl lg:rounded-2xl cursor-pointer'>
           <img
             className='rounded-2xl'
-            src={`../src/assets/image-product-${productImage}.jpg`}
+            src={`./image-product-${productImage}.jpg`}
             alt='product photo nr 1'
           />
         </div>
@@ -61,7 +61,7 @@ function Lightbox({ showOn, handleShowOn }) {
               className={`hover:sepia rounded-xl ${
                 productImage === 1 ? 'sepia' : ''
               }`}
-              src='../src/assets/image-product-1-thumbnail.jpg'
+              src='./image-product-1-thumbnail.jpg'
               alt='product photo nr 1 thumbnail'
               value={1}
               onClick={handleChangeImage}
@@ -76,7 +76,7 @@ function Lightbox({ showOn, handleShowOn }) {
               className={`hover:sepia rounded-xl ${
                 productImage === 2 ? 'sepia' : ''
               }`}
-              src='../src/assets/image-product-2-thumbnail.jpg'
+              src='./image-product-2-thumbnail.jpg'
               alt='product photo nr 2 thumbnail'
               value={2}
               onClick={handleChangeImage}
@@ -91,7 +91,7 @@ function Lightbox({ showOn, handleShowOn }) {
               className={`hover:sepia rounded-xl ${
                 productImage === 3 ? 'sepia' : ''
               }`}
-              src='../src/assets/image-product-3-thumbnail.jpg'
+              src='./image-product-3-thumbnail.jpg'
               alt='product photo nr 3 thumbnail'
               value={3}
               onClick={handleChangeImage}
@@ -106,7 +106,7 @@ function Lightbox({ showOn, handleShowOn }) {
               className={`hover:sepia rounded-xl ${
                 productImage === 4 ? 'sepia' : ''
               }`}
-              src='../src/assets/image-product-4-thumbnail.jpg'
+              src='./image-product-4-thumbnail.jpg'
               alt='product photo nr 4 thumbnail'
               value={4}
               onClick={handleChangeImage}

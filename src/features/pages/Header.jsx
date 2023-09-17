@@ -69,7 +69,7 @@ function Header() {
           )}
           <div>
             <img
-              src='../src/assets/image-avatar.png'
+              src='./image-avatar.png'
               alt='profile photo'
               className='h-6 lg:h-12 cursor-pointer active:scale-90 border-2 border-transparent rounded-full hover:border-orange-500'
             />
