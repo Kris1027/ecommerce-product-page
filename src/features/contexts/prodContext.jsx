@@ -4,6 +4,7 @@ const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [productAmount, setProductAmount] = useState(0);
+  const [addToCart, setAddToCart] = useState(false);
 
   function handleDecreaseAmount() {
     if (productAmount === 0) return;
@@ -14,6 +15,11 @@ export const ProductProvider = ({ children }) => {
     setProductAmount(productAmount + 1);
   }
 
+  function handleAddToCart(e) {
+    e.preventDefault();
+    setAddToCart(true);
+  }
+
   return (
     <ProductContext.Provider
       value={{
@@ -21,6 +27,8 @@ export const ProductProvider = ({ children }) => {
         handleDecreaseAmount,
         handleIncreaseAmount,
         setProductAmount,
+        handleAddToCart,
+        addToCart,
       }}
     >
       {children}

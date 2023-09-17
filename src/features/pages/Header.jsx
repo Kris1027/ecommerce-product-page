@@ -10,7 +10,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const { productAmount } = useProductContext();
+  const { addToCart, productAmount } = useProductContext();
 
   function handleToggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -52,7 +52,7 @@ function Header() {
           </Link>
         </div>
         <div
-          className='flex gap-4 items-center cursor-pointer'
+          className='flex gap-4 items-center cursor-pointer relative'
           onClick={handleToggleCart}
         >
           <svg width='22' height='20' xmlns='http://www.w3.org/2000/svg'>
@@ -62,7 +62,11 @@ function Header() {
               fillRule='nonzero'
             />
           </svg>
-          {productAmount === 0 ? '' : <AmountProductInfo />}
+          {addToCart === false || productAmount === 0 ? (
+            ''
+          ) : (
+            <AmountProductInfo />
+          )}
           <div>
             <img
               src='../src/assets/image-avatar.png'

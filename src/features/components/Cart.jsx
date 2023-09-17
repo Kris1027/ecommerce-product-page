@@ -1,7 +1,7 @@
 import { useProductContext } from '../contexts/prodContext';
 
 function Cart({ isCartOpen }) {
-  const { productAmount, setProductAmount } = useProductContext();
+  const { addToCart, setProductAmount, productAmount } = useProductContext();
 
   let totalPrice = 125 * productAmount;
 
@@ -9,11 +9,11 @@ function Cart({ isCartOpen }) {
     <div
       className={`${
         isCartOpen ? 'absolute' : 'hidden'
-      } top-28 left-3 z-50 bg-white w-[95%] rounded-xl md:w-[70%] md:left-32 lg:left-2/3 lg:w-1/4 shadow-2xl`}
+      } top-28 left-3 z-50 bg-white w-[95%] rounded-xl md:w-[70%] md:left-32 lg:left-2/3 lg:max-w-lg shadow-2xl`}
     >
       <h1 className='p-8 font-bold'>Cart</h1>
       <hr />
-      {productAmount ? (
+      {addToCart && productAmount !== 0 ? (
         <>
           <div className='p-6'>
             <div className='flex justify-between items-center'>
