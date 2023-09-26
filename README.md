@@ -1,8 +1,15 @@
-# React + Vite
+# E-Commerce-Product-Page
+> https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- React
+- Tailwind
 
-Currently, two official plugins are available:
+## Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1218" alt="Zrzut ekranu 2023-09-26 o 11 53 30" src="https://github.com/Kris1027/ecommerce-product-page/assets/120410235/992583c5-4634-40f3-aef6-ee9e81b678b2">
+
+<img width="1081" alt="Zrzut ekranu 2023-09-26 o 11 52 15" src="https://github.com/Kris1027/ecommerce-product-page/assets/120410235/51287cb5-564e-4382-8221-0d964a993611">
